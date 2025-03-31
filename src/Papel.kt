@@ -1,11 +1,12 @@
 class Papel {
-    var pontos: Int = 0
-    fun luta(elemento: String) {
+    fun luta(elemento: String): Int {
         if (elemento.equals("TESOURA")) { // PERDE
-        pontos--
+        return -1
         }
         if (elemento.equals("PEDRA")) {  // GANHA
-            pontos++
+            return 1
         }
+        return 0
     }
+
 }

@@ -1,11 +1,11 @@
 class Tesoura {
-    var pontos: Int = 0
-    fun luta(elemento: String) {
+    fun luta(elemento: String): Int {
         if (elemento.equals("PEDRA")) { // PERDE
-            pontos--
+            return -1
         }
         if (elemento.equals("PAPEL")) { // GANHA
-            pontos++
+            return 1
         }
+        return 0
     }
 }
