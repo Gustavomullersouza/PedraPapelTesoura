@@ -1,3 +1,5 @@
+var pontos = 0
+
 fun main() {
     do {
         println("1-JOGAR")
@@ -32,15 +34,16 @@ fun jogar() {
         var papel = Papel()
 
         var movimentoPC = computador()// movimento do PC
+        println("o movimento do computador $movimentoPC")
         when(jogada){
             "PEDRA" ->{
-                pedra.luta(movimentoPC)
+                pontos = pedra.luta(movimentoPC)
             }
             "PAPEL" ->{
-                papel.luta(movimentoPC)
+                pontos = papel.luta(movimentoPC)
             }
             "TESOURA" ->{
-                tesoura.luta(movimentoPC)
+                pontos = tesoura.luta(movimentoPC)
             }
         }
 
