@@ -18,4 +18,36 @@ fun main() {
 fun jogar() {
     println("Digite seu nickname: ")
     val nickname = readLine() // USUARIO DIGITA SEU NICK
+
+    println("QUE OS JOGOS COMEÇEM!")
+    var rodadas = 1
+    do {
+        println("O que você quer jogar? ")
+        println("Pedra,Papel ou Tesoura")
+        var jogada = readln().uppercase()
+
+        //instância dos elementos do jogo
+        var pedra = Pedra()
+        var tesoura = Tesoura()
+        var papel = Papel()
+
+        // continuar...
+
+        rodadas ++ // no final da rodada incrmenta
+    }while (rodadas <= 3)
+}
+
+fun computador(): String{
+    /**
+     * Aqui temos um RANGE que é determinado por (1..3)
+     * um range é um intervalo númeirco, neste caso de 1 a 3
+     * a função .random ira gerar um número aleatório  dentro
+     * desse intervalo que determinamos*/
+   val movimento =  (1..3). random()
+    when (movimento) {
+        1 -> return "TESOURA"
+        2 -> return "PEDRA"
+        3 -> return "PAPEL"
+    }
+
 }
