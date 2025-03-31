@@ -46,7 +46,7 @@ fun jogar() {
                 pontos = tesoura.luta(movimentoPC)
             }
         }
-        println("Você tem: $pontos pontors")
+        println("Você tem: $pontos pontos")
         println("Proxima rodada!")
         rodadas ++ // no final da rodada incrmenta
     }while (rodadas <= 3)
